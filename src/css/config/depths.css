@@ -1,0 +1,5 @@
+:root {
+  --depth-base: 1;
+  --depth-app: 1000;
+  --depth-modal: 1001;
+}
