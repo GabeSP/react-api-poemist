@@ -2,7 +2,7 @@
 //@param str: text string to truncate/cut. minimum size: 3
 //@param size: string size before "..."
 export const doTruncarStr = (str, size) => {
-  if (str==undefined || str =='' || size==undefined || size ==''){
+  if (str === undefined || str === '' || size === undefined || size === ''){
     return str;
   }
 
