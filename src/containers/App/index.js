@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Header from '../../components/Header/Header'
+import Poems from '../Poems/Poems'
+import style from './style.module.css'
 
-function App() {
-  return (
-    <div className="App">
-      <Header title="Hello World">
+class App extends Component {
+  constructor () {
+    super();
 
-      </Header>
-    </div>
-  );
+    this.state = {
+      title: 'Poemist API'
+    }
+  }
+  render () {
+    return (
+      <div>
+        <Header title={this.state.title} />
+        <div className={style.container}>
+          <Poems></Poems>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

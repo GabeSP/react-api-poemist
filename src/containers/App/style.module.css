@@ -1,0 +1,12 @@
+@import '../../css/config/colors.css';
+@import '../../css/config/depths.css';
+@import '../../css/config/shadows.css';
+@import '../../css/config/spacings.css';
+@import '../../css/config/sizes.css';
+@import '../../css/config/typography.css';
+
+.container {
+  max-width: 960px;
+  width: 100vw;
+  margin: 0 auto;
+}
