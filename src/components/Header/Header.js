@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import style from './header.module.css'
 
 const Header = (props) => (
-  <nav className="nav">
-    <div className="container">
-      <h1>{props.title}</h1>
+  <nav className={style.nav}>
+    <div className={style.container}>
+      <h1 className={style.title}>{props.title}</h1>
     </div>
   </nav>
 )
