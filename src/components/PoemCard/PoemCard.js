@@ -1,18 +1,16 @@
 import React from 'react'
+import { doTruncarStr, doShortUrl } from '../../utils/tools'
 import style from './poemCard.module.css'
 
 const PoemCard = (props) => (
   <div className={style.container}>
-    <img className={style.img} src='https://source.unsplash.com/random' alt='img'/>
     <h2 className={style.title}>{props.poem.title}</h2>
-    <div className={style.content}>
-      <span className={style.url}>{props.poem.url}</span>
-      <ul className={style.poemList}>
-        <li className={style.poet}>
-          <p className={style.author}>{props.poem.poet.name}</p>
-          <p className={style.author}>{props.poem.poet.url}</p>
-        </li>
-      </ul>
+    <div className={style.body}>
+      <p className={style.author}>
+        <span className={style.authorName}>{props.poem.name}</span>
+        <a href={props.poem.url} className={style.authorUrl}>{doShortUrl(props.poem.url)}</a>
+      </p>
+      <p className={style.content}>{doTruncarStr(props.poem.content, 600)}</p>
     </div>
   </div>
 )

@@ -54,10 +54,12 @@ class Poems extends Component {
     this.setState(() => ({ poems: PoemService.getPoems() }))
   }
 
+
   render() {
+    const { poems } = this.props;
     return (
       <div className={style.container}>
-        <PoemsList poems={this.state.poems} />
+        <PoemsList poems={poems} />
       </div>
     )
   }

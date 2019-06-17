@@ -16,16 +16,14 @@ class App extends Component {
 
   componentDidMount() {
     axios
-    .get('https://www.poemist.com/api/v1/randompoems', {
-      headers: {"Access-Control-Allow-Origin": "*"}
-    })
+    .get('https://www.poemist.com/api/v1/randompoems')
     .then(response => {
-       console.log('-->', response)
       const newPoems = response.data.map(r => {
         return {
           title: r.title,
-          name: r.poet.name,
-          url: r.poet.url
+          name:  r.poet.name,
+          content: r.content,
+          url:   r.poet.url
         }
       })
 
@@ -43,7 +41,7 @@ class App extends Component {
       <div>
         <Header title={this.state.title} />
         <div className={style.container}>
-          <Poems></Poems>
+          <Poems poems={this.state.poems}/>
         </div>
       </div>
     );

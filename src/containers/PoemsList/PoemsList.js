@@ -6,7 +6,7 @@ import style from './poemsList.module.css'
 const PoemsList = (props) => (
   <div className={style.container}>
     {props.poems.map(poem => (
-      <PoemCard  key={poem.id} poem={poem}/>
+      <PoemCard  poem={poem}/>
     ))}
   </div>
 )
